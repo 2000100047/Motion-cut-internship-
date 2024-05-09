@@ -1,0 +1,21 @@
+def quiz():
+    questions = [
+        {"question": "What is the capital of France?", "answer": "Paris"},
+        {"question": "Which planet is known as the Red Planet?", "answer": "Mars"},
+        {"question": "What is the largest mammal?", "answer": "Blue whale"},
+    ]
+
+    score = 0
+    for q in questions:
+        user_answer = input(q["question"] + "\nYour answer: ")
+        if user_answer.lower() == q["answer"].lower():
+            print("Correct!\n")
+            score += 1
+        else:
+            print("Incorrect. The correct answer is: {}\n".format(q["answer"]))
+
+    print("Quiz completed! You scored {}/{}.".format(score, len(questions)))
+
+
+if __name__ == "__main__":
+    quiz()
